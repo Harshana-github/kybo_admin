@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@atlaskit/button": "^20.4.0",
+    "@atlaskit/css-reset": "^6.11.5",
+    "@atlaskit/tokens": "^3.3.0",
     "cra-template": "1.2.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",

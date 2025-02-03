@@ -1,8 +1,9 @@
 import React from 'react'
+import Button from '@atlaskit/button/new';
 
 const App = () => {
   return (
-    <div>App</div>
+    <><Button appearance="primary">Primary button</Button></>
   )
 }
 
