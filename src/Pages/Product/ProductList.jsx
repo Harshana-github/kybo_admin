@@ -9,6 +9,7 @@ import TextField from "@atlaskit/textfield";
 import PageHeader from "@atlaskit/page-header";
 import DynamicTable from "@atlaskit/dynamic-table";
 import TextArea from "@atlaskit/textarea";
+import { useTranslation } from "react-i18next";
 
 import { Checkbox } from "@atlaskit/checkbox";
 import ModalDialog, {
@@ -92,6 +93,7 @@ const head = createHead(true);
 
 const ProductList = () => {
   const dispatch = useDispatch();
+  const { t } = useTranslation("product");
 
   const [isOpen, setIsOpen] = useState(false);
   const [isDisplay, setIsDisplay] = useState(true);
@@ -110,7 +112,7 @@ const ProductList = () => {
     is_stock: true,
     is_display: isDisplay,
     created_by: 1,
-    updated_by: 1
+    updated_by: 1,
   };
 
   const handleFormSubmit = () => {
@@ -129,7 +131,7 @@ const ProductList = () => {
   const actionsContent = (
     <ButtonGroup label="Content actions">
       <Button appearance="primary" onClick={open}>
-        Add product
+        {t("addProduct")}
       </Button>
       <Button>Share</Button>
       <Button>...</Button>
