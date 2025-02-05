@@ -1,12 +1,16 @@
 {
-    "orders": "Orders",
-    "products": "Products",
-    "masters": "Masters",
-    "newOrder": "New Order",
-    "search": "Search",
-    "tooltip":{
-        "create_new_order": "Create new order",
-        "notifications": "Notifications",
-        "yourProfileAndSettings": "Your profile and settings"
-    }
+  "orders": "Orders",
+  "products": "Products",
+  "masters": "Masters",
+  "newOrder": "New Order",
+  "search": "Search",
+  "profile": {
+    "profile": "Profile",
+    "logout": "Logout"
+  },
+  "tooltip": {
+    "create_new_order": "Create new order",
+    "notifications": "Notifications",
+    "yourProfileAndSettings": "Your profile and settings"
+  }
 }

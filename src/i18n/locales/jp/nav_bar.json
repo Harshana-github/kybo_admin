@@ -4,6 +4,10 @@
   "masters": "マスター",
   "newOrder": "新規注文",
   "search": "検索",
+  "profile": {
+    "profile": "プロフィール",
+    "logout": "ログアウト"
+  },
   "tooltip": {
     "create_new_order": "新規注文を作成",
     "notifications": "通知",

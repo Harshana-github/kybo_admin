@@ -4,6 +4,10 @@
   "masters": "මාස්ටර්",
   "newOrder": "නව ඇණවුම",
   "search": "සෙවන්න",
+  "profile": {
+    "profile": "පැතිකඩ",
+    "logout": "ඉවත් වන්න"
+  },
   "tooltip": {
     "create_new_order": "නව ඇණවුමක් සාදන්න",
     "notifications": "දැනුම්දීම්",

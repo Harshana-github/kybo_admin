@@ -1,7 +1,8 @@
 {
-    "siteTitle": "ක්යිබෝ",
-    "home": "මුල් පිටුව",
-    "settings": "සැකසුම්",
-    "languageSettings": "භාෂා සැකසුම්"
-  }
-  
+  "siteTitle": "ක්යිබෝ",
+  "home": "මුල් පිටුව",
+  "settings": "සැකසුම්",
+  "languageSettings": "භාෂා සැකසුම්",
+  "darkMode": "අඳුරු ප්‍රකෘතිය",
+  "lightMode": "ආලෝකමය ප්‍රකෘතිය"
+}

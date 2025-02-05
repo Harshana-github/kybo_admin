@@ -2,5 +2,7 @@
   "siteTitle": "楽っと",
   "home": "ホーム",
   "settings": "設定",
-  "languageSettings": "言語設定"
+  "languageSettings": "言語設定",
+  "darkMode": "ダークモード",
+  "lightMode": "ライトモード"
 }

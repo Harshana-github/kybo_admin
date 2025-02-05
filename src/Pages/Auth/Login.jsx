@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 
 import ButtonGroup from "@atlaskit/button/button-group";
 import LoadingButton from "@atlaskit/button/loading-button";
@@ -20,14 +20,31 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { login } from "../../Features/auth/authThunk";
 import { useTranslation } from "react-i18next";
+import { setGlobalTheme } from "@atlaskit/tokens";
 
 function Login() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { t: tLogin, i18n } = useTranslation("login");
+  const { t: tGeneral } = useTranslation("general");
 
   const changeLanguage = (lang) => {
     i18n.changeLanguage(lang); // Change language dynamically
+  };
+
+  const [themeMode, setThemeMode] = useState("dark");
+
+  useEffect(() => {
+    setGlobalTheme({
+      light: "light",
+      dark: "dark",
+      colorMode: themeMode, // "light" or "dark"
+      typography: "typography-modernized",
+    });
+  }, [themeMode]);
+
+  const toggleTheme = () => {
+    setThemeMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
   };
 
   const handleSubmit = async (data) => {
@@ -55,6 +72,9 @@ function Login() {
         left: "0",
       }}
     >
+      <Button key="toggle" onClick={toggleTheme} appearance="subtle">
+        {themeMode === "light" ? tGeneral("darkMode") : tGeneral("lightMode")}
+      </Button>
       <Form onSubmit={handleSubmit}>
         {({ formProps, submitting }) => (
           <form {...formProps}>
