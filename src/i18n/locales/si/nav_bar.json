@@ -1,0 +1,12 @@
+{
+  "orders": "ඇණවුම්",
+  "products": "නිෂ්පාදන",
+  "masters": "මාස්ටර්",
+  "newOrder": "නව ඇණවුම",
+  "search": "සෙවන්න",
+  "tooltip": {
+    "create_new_order": "නව ඇණවුමක් සාදන්න",
+    "notifications": "දැනුම්දීම්",
+    "yourProfileAndSettings": "ඔබගේ පැතිකඩ සහ සැකසුම්"
+  }
+}

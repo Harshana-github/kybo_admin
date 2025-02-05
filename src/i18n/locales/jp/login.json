@@ -1,0 +1,15 @@
+{
+  "signIn": "サインイン",
+  "requiredFieldsMessage": "必須項目はアスタリスクで示されています",
+  "email": "メールアドレス",
+  "emailHelper": "文字、数字、ピリオドを使用できます。",
+  "emailError": "このユーザー名はすでに使用されています。別のものを試してください。",
+  "password": "パスワード",
+  "passwordHelper": "文字、数字、記号を組み合わせた8文字以上を使用してください。",
+  "passwordError": "パスワードは8文字以上である必要があります。",
+  "awesomePassword": "素晴らしいパスワードです！",
+  "rememberMe": "ログイン状態を保持する",
+  "alwaysSignIn": "このデバイスで常にサインインする",
+  "cancel": "キャンセル",
+  "signUp": "サインアップ"
+}

@@ -62,27 +62,30 @@ const AtlassianProductHome = () => {
 };
 
 const CreateButton = () => {
+  const { t } = useTranslation("nav_bar");
   return (
     <Create
-      buttonTooltip="Create a new order"
-      iconButtonTooltip="Create a new order"
-      text="New Order"
+      buttonTooltip={t("tooltip.create_new_order")}
+      iconButtonTooltip={t("tooltip.create_new_order")}
+      text={t("newOrder")}
       href=""
     />
   );
 };
 
 const DefaultProfile = () => {
+  const { t } = useTranslation("nav_bar");
   return (
     <Profile
       icon={<Avatar size="small" src={avatarUrl} />}
       onClick={onClick}
-      tooltip="Your profile and settings"
+      tooltip={t("tooltip.yourProfileAndSettings")}
     />
   );
 };
 
 const DefaultSearch = () => {
+  const { t } = useTranslation("nav_bar");
   const [value, setValue] = useState("");
 
   const onChange = (e) => {
@@ -92,9 +95,9 @@ const DefaultSearch = () => {
   return (
     <Search
       onClick={onChange}
-      placeholder="Search..."
-      tooltip="Search"
-      label="Search"
+      placeholder={t("search")}
+      tooltip={t("search")}
+      label={t("search")}
       value={value}
     />
   );
@@ -106,17 +109,20 @@ const NotificationsBadge = () => {
   );
 };
 
-const PrimaryItems = [
-  <PrimaryButton>Orders</PrimaryButton>,
-  <PrimaryDropdownButton>Products</PrimaryDropdownButton>,
-  <PrimaryDropdownButton>Maters</PrimaryDropdownButton>,
-];
-
 function Home() {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation("nav_bar");
+  const { t: tSide } = useTranslation("side_bar");
   const changeLanguage = (lang) => {
     i18n.changeLanguage(lang); // Change language dynamically
   };
+
+  const PrimaryItems = [
+    <PrimaryButton key="orders">{t("orders")}</PrimaryButton>,
+    <PrimaryDropdownButton key="products">
+      {t("products")}
+    </PrimaryDropdownButton>,
+    <PrimaryDropdownButton key="masters">{t("masters")}</PrimaryDropdownButton>,
+  ];
   const { token } = useSelector((state) => state.auth);
   return (
     <>
@@ -136,7 +142,7 @@ function Home() {
               return (
                 <Notifications
                   badge={NotificationsBadge}
-                  tooltip="Notifications"
+                  tooltip={t("tooltip.notifications")}
                 />
               );
             }}
@@ -159,7 +165,7 @@ function Home() {
               ResizeButton: {
                 render: (Component, props) => (
                   <Tooltip
-                    content={"Left Sidebar"}
+                    content={tSide("tooltip.leftSideBar")}
                     hideTooltipOnClick
                     position="right"
                     testId="tooltip"
@@ -174,8 +180,8 @@ function Home() {
               <div style={{ width: 280, height: 1000 }}>
                 <SideNavigation label="project" testId="side-navigation">
                   <NavigationHeader>
-                    <Header description="By Sonasu service">
-                      KYBO Official
+                    <Header description={tSide("sideBarTopSubTitle")}>
+                      {tSide("sideBarTopTitle")}
                     </Header>
                   </NavigationHeader>
 
@@ -188,26 +194,40 @@ function Home() {
                       <NestingItem
                         id="2"
                         testId="filter-nesting-item"
-                        title="Filters"
+                        title={tSide("filters.filters")}
                         iconBefore={<FilterIcon label="" />}
                         iconAfter={<LightbulbIcon label="" />}
                       >
                         <Section>
-                          <ButtonItem>Search issues</ButtonItem>
+                          <ButtonItem>
+                            {tSide("filters.searchIssues")}
+                          </ButtonItem>
                         </Section>
-                        <Section title="Starred">
-                          <ButtonItem>Everything me</ButtonItem>
-                          <ButtonItem>My open issues</ButtonItem>
-                          <ButtonItem>Reported by me</ButtonItem>
+                        <Section title={tSide("filters.started")}>
+                          <ButtonItem>
+                            {tSide("filters.everythingMe")}
+                          </ButtonItem>
+                          <ButtonItem>
+                            {tSide("filters.myOpenIssue")}
+                          </ButtonItem>
+                          <ButtonItem>
+                            {tSide("filters.reportedByMe")}
+                          </ButtonItem>
                         </Section>
-                        <Section hasSeparator title="Other">
-                          <ButtonItem>All issues</ButtonItem>
-                          <ButtonItem>Open issues</ButtonItem>
-                          <ButtonItem>Created recently</ButtonItem>
-                          <ButtonItem>Resolved recently</ButtonItem>
+                        <Section hasSeparator title={tSide("filters.other")}>
+                          <ButtonItem>{tSide("filters.allIssues")}</ButtonItem>
+                          <ButtonItem>{tSide("filters.openIssues")}</ButtonItem>
+                          <ButtonItem>
+                            {tSide("filters.createdRecently")}
+                          </ButtonItem>
+                          <ButtonItem>
+                            {tSide("filters.resolvedRecently")}
+                          </ButtonItem>
                         </Section>
                         <Section hasSeparator>
-                          <ButtonItem>View all filters</ButtonItem>
+                          <ButtonItem>
+                            {tSide("filters.viewAllFilters")}
+                          </ButtonItem>
                         </Section>
                       </NestingItem>
 
@@ -219,10 +239,10 @@ function Home() {
                         <NestingItem
                           id="1"
                           isSelected
-                          title="Product Management"
+                          title={tSide("product.productManagement")}
                           iconBefore={<PeopleGroupIcon label="" />}
                         >
-                          <Section title="Product Management">
+                          <Section title={tSide("product.productManagement")}>
                             <Link
                               to="/product"
                               style={{
@@ -230,7 +250,7 @@ function Home() {
                                 color: "inherit",
                               }}
                             >
-                              <ButtonItem>Dashboard</ButtonItem>
+                              <ButtonItem>{tSide("product.dashboard")}</ButtonItem>
                             </Link>
                             <Link
                               to="/product"
@@ -239,11 +259,11 @@ function Home() {
                                 color: "inherit",
                               }}
                             >
-                              <ButtonItem>Product List</ButtonItem>
+                              <ButtonItem>{tSide("product.productList")}</ButtonItem>
                             </Link>
                           </Section>
                           <Section hasSeparator>
-                            <ButtonItem>Product Management Options</ButtonItem>
+                            <ButtonItem>{tSide("product.productManagementOptions")}</ButtonItem>
                           </Section>
                         </NestingItem>
                       </Link>
@@ -252,24 +272,24 @@ function Home() {
                       <NestingItem
                         id="3"
                         iconBefore={<SettingsIcon label="" />}
-                        title="Settings"
+                        title={tSide("settings.settings")}
                         testId="settings-nesting-item"
                       >
                         <Section>
                           <NestingItem
                             iconBefore={<LanguageIcon label="" />}
                             id="3-1"
-                            title="Language settings"
+                            title={tSide("settings.lSettings")}
                           >
                             <Section>
                               <ButtonItem onClick={() => changeLanguage("en")}>
                                 English
                               </ButtonItem>
                               <ButtonItem onClick={() => changeLanguage("jp")}>
-                                Japanese
+                                日本語
                               </ButtonItem>
                               <ButtonItem onClick={() => changeLanguage("si")}>
-                                Sinhala
+                                සිංහල
                               </ButtonItem>
                             </Section>
                           </NestingItem>
@@ -287,7 +307,7 @@ function Home() {
                             href="/feedback"
                             spacing="none"
                           >
-                            Give feedback
+                            {tSide("sideBarBottomTitle1")}
                           </Button>
                           {" ∙ "}
                           <Button
@@ -295,13 +315,13 @@ function Home() {
                             href="/learn"
                             spacing="none"
                           >
-                            Learn more
+                            {tSide("sideBarBottomTitle2")}
                           </Button>
                         </Fragment>
                       }
                       iconBefore={<Icon label="mode" />}
                     >
-                      You're in a kybo project
+                      {tSide("sideBarBottomSubTitle")}
                     </Footer>
                   </NavigationFooter>
                 </SideNavigation>

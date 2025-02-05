@@ -1,0 +1,36 @@
+{
+  "sideBarTopTitle": "KYBO නිල",
+  "sideBarTopSubTitle": "සෝනාසු සේවාවෙන්",
+  "goBack": "ආපසු යන්න",
+  "tooltip": {
+    "leftSideBar": "වම අතුරුපුවරුව"
+  },
+  "filters": {
+    "filters": "ෆිල්ටර්ස්",
+    "searchIssues": "ප්‍රශ්න සොයන්න",
+    "started": "ආරම්භ",
+    "everythingMe": "මට සම්බන්ධ සියල්ල",
+    "myOpenIssue": "මගේ විවෘත ගැටලු",
+    "reportedByMe": "මගින් වාර්තා කරන ලද",
+    "searchIssues": "ප්‍රශ්න සොයන්න",
+    "other": "වෙනත්",
+    "allIssues": "සියලු ගැටලු",
+    "openIssues": "විවෘත ගැටලු",
+    "createdRecently": "මෑතකදී නිර්මාණය කරන ලදි",
+    "resolvedRecently": "මෑතකදී විසඳා ඇත",
+    "viewAllFilters": "සියලු ෆිල්ටර් බලන්න"
+  },
+  "product": {
+    "productManagement": "නිෂ්පාදන කළමනාකරණය",
+    "dashboard": "ඩෑෂ්බෝඩ්",
+    "productList": "නිෂ්පාදන ලැයිස්තුව",
+    "productManagementOptions": "නිෂ්පාදන කළමනාකරණ විකල්ප"
+  },
+  "settings": {
+    "settings": "සැකසුම්",
+    "lSettings": "භාෂා සැකසුම්"
+  },
+  "sideBarBottomTitle1": "ප්‍රතිචාර ලබාදෙන්න",
+  "sideBarBottomTitle2": "තවත් දැනගන්න",
+  "sideBarBottomSubTitle": "ඔබ KYBO ව්‍යාපෘතියේ සිටී"
+}

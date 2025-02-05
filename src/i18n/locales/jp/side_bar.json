@@ -1,0 +1,36 @@
+{
+  "sideBarTopTitle": "KYBO公式",
+  "sideBarTopSubTitle": "Sonasuサービスによる",
+  "goBack": "戻る",
+  "tooltip": {
+    "leftSideBar": "左側のサイドバー"
+  },
+  "filters": {
+    "filters": "フィルター",
+    "searchIssues": "課題を検索",
+    "started": "開始済み",
+    "everythingMe": "自分に関する全て",
+    "myOpenIssue": "自分のオープンな課題",
+    "reportedByMe": "自分が報告した課題",
+    "searchIssues": "課題を検索",
+    "other": "その他",
+    "allIssues": "すべての課題",
+    "openIssues": "オープンな課題",
+    "createdRecently": "最近作成された",
+    "resolvedRecently": "最近解決された",
+    "viewAllFilters": "すべてのフィルターを表示"
+  },
+  "product": {
+    "productManagement": "製品管理",
+    "dashboard": "ダッシュボード",
+    "productList": "製品一覧",
+    "productManagementOptions": "製品管理オプション"
+  },
+  "settings": {
+    "settings": "設定",
+    "lSettings": "言語設定"
+  },
+  "sideBarBottomTitle1": "フィードバックを送る",
+  "sideBarBottomTitle2": "もっと知る",
+  "sideBarBottomSubTitle": "あなたはKYBOプロジェクトにいます"
+}

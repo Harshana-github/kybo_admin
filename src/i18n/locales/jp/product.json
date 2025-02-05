@@ -1,6 +1,27 @@
 {
-  "productDetails": "製品詳細",
-  "addToCart": "カートに追加",
-  "checkout": "チェックアウト",
-  "addProduct": "製品を追加"
+  "headingSection": {
+    "productManagement": "製品管理",
+    "filter": "フィルター",
+    "chooseOption": "オプションを選択",
+    "addProduct": "製品を追加",
+    "share": "共有"
+  },
+  "contentSection": {
+    "name": "名前",
+    "price": "価格",
+    "action": "操作"
+  },
+  "addProductModel": {
+    "addNewProduct": "新規製品追加",
+    "display": "表示",
+    "productName": "製品名",
+    "milkYogurt": "ミルクヨーグルト",
+    "taxRate": "税率",
+     "selectPlaceholder": "選択してください...",
+    "price": "価格",
+    "productDescription": "製品説明",
+    "deliciousMilkYogurt": "美味しいミルクヨーグルト",
+    "cancel": "キャンセル",
+    "submit": "送信"
+  }
 }

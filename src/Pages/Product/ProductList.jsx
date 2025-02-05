@@ -27,73 +27,80 @@ import { useDispatch } from "react-redux";
 import { getProduct, storeProduct } from "../../Features/product/productThunk";
 import { useSelector } from "react-redux";
 
-const colors = [
-  { label: "15.5%", value: "1" },
-  { label: "10.5%", value: "2" },
-];
-
-// ------------- Start - Page Header -------------
-const selectContainerStyles = xcss({
-  flex: "0 0 200px",
-  marginInlineStart: "space.100",
-});
-
-const flexBoxStyles = xcss({
-  flex: "0 0 200px",
-});
-
-const breadcrumbs = (
-  <Breadcrumbs onExpand={__noop}>
-    <BreadcrumbsItem text="Product Management" key="Product Management" />
-  </Breadcrumbs>
-);
-
-const barContent = (
-  <Inline>
-    <Box xcss={flexBoxStyles}>
-      <TextField isCompact placeholder="Filter" aria-label="Filter" />
-    </Box>
-    <Box xcss={selectContainerStyles}>
-      <Select
-        spacing="compact"
-        placeholder="Choose an option"
-        aria-label="Choose an option"
-      />
-    </Box>
-  </Inline>
-);
-// ------------- End - Page Header -------------
-
-const createHead = (withWidth) => {
-  return {
-    cells: [
-      {
-        key: "name",
-        content: "Name",
-        isSortable: true,
-        width: withWidth ? 25 : undefined,
-      },
-      {
-        key: "price",
-        content: "Price",
-        shouldTruncate: true,
-        isSortable: true,
-        width: withWidth ? 15 : undefined,
-      },
-      {
-        key: "more",
-        content: "Actions",
-        shouldTruncate: true,
-      },
-    ],
-  };
-};
-
-const head = createHead(true);
-
 const ProductList = () => {
   const dispatch = useDispatch();
-  const { t } = useTranslation("product");
+  const { t: tProduct } = useTranslation("product");
+
+  const colors = [
+    { label: "15.5%", value: "1" },
+    { label: "10.5%", value: "2" },
+  ];
+
+  // ------------- Start - Page Header -------------
+  const selectContainerStyles = xcss({
+    flex: "0 0 200px",
+    marginInlineStart: "space.100",
+  });
+
+  const flexBoxStyles = xcss({
+    flex: "0 0 200px",
+  });
+
+  const breadcrumbs = (
+    <Breadcrumbs onExpand={__noop}>
+      <BreadcrumbsItem
+        text={tProduct("headingSection.productManagement")}
+        key="Product Management"
+      />
+    </Breadcrumbs>
+  );
+
+  const barContent = (
+    <Inline>
+      <Box xcss={flexBoxStyles}>
+        <TextField
+          isCompact
+          placeholder={tProduct("headingSection.filter")}
+          aria-label="Filter"
+        />
+      </Box>
+      <Box xcss={selectContainerStyles}>
+        <Select
+          spacing="compact"
+          placeholder={tProduct("headingSection.chooseOption")}
+          aria-label={tProduct("headingSection.chooseOption")}
+        />
+      </Box>
+    </Inline>
+  );
+  // ------------- End - Page Header -------------
+
+  const createHead = (withWidth) => {
+    return {
+      cells: [
+        {
+          key: "name",
+          content: tProduct("contentSection.name"),
+          isSortable: true,
+          width: withWidth ? 25 : undefined,
+        },
+        {
+          key: "price",
+          content: tProduct("contentSection.price"),
+          shouldTruncate: true,
+          isSortable: true,
+          width: withWidth ? 15 : undefined,
+        },
+        {
+          key: "more",
+          content: tProduct("contentSection.action"),
+          shouldTruncate: true,
+        },
+      ],
+    };
+  };
+
+  const head = createHead(true);
 
   const [isOpen, setIsOpen] = useState(false);
   const [isDisplay, setIsDisplay] = useState(true);
@@ -131,9 +138,9 @@ const ProductList = () => {
   const actionsContent = (
     <ButtonGroup label="Content actions">
       <Button appearance="primary" onClick={open}>
-        {t("addProduct")}
+        {tProduct("headingSection.addProduct")}
       </Button>
-      <Button>Share</Button>
+      <Button> {tProduct("headingSection.share")}</Button>
       <Button>...</Button>
     </ButtonGroup>
   );
@@ -164,7 +171,7 @@ const ProductList = () => {
         actions={actionsContent}
         bottomBar={barContent}
       >
-        Product Management
+        {tProduct("headingSection.productManagement")}
       </PageHeader>
       <DynamicTable
         head={head}
@@ -181,7 +188,7 @@ const ProductList = () => {
               {({ formProps }) => (
                 <form id="form-with-id" {...formProps}>
                   <ModalHeader>
-                    <ModalTitle>Add New Product</ModalTitle>
+                    <ModalTitle>{tProduct("addProductModel.addNewProduct")}</ModalTitle>
                   </ModalHeader>
 
                   <ModalBody>
@@ -189,7 +196,7 @@ const ProductList = () => {
                       {({ fieldProps }) => (
                         <Checkbox
                           {...fieldProps}
-                          label="Display"
+                          label={tProduct("addProductModel.display")}
                           isChecked={isDisplay}
                           onChange={isDisplayHandler}
                         />
@@ -197,14 +204,14 @@ const ProductList = () => {
                     </CheckboxField>
 
                     <Field
-                      label="Product Name"
+                      label={tProduct("addProductModel.productName")}
                       isRequired
                       name="products_name"
                       defaultValue={name}
                     >
                       {({ fieldProps }) => (
                         <Textfield
-                          placeholder="Milk Yogurt"
+                          placeholder={tProduct("addProductModel.milkYogurt")}
                           {...fieldProps}
                           value={name}
                           onChange={(e) => setName(e.target.value)}
@@ -214,7 +221,7 @@ const ProductList = () => {
 
                     <Field
                       name="products_tax"
-                      label="Tax rate"
+                      label={tProduct("addProductModel.taxRate")}
                       defaultValue={taxID}
                       isRequired
                     >
@@ -223,6 +230,7 @@ const ProductList = () => {
                           inputId={id}
                           {...rest}
                           options={colors}
+                          placeholder={tProduct("addProductModel.selectPlaceholder")}
                           isClearable
                           value={colors.find((opt) => opt.value === taxID)}
                           onChange={(option) => setTaxID(option?.value || null)}
@@ -231,7 +239,7 @@ const ProductList = () => {
                     </Field>
 
                     <Field
-                      label="Price"
+                      label={tProduct("addProductModel.price")}
                       isRequired
                       name="products_price"
                       defaultValue={price}
@@ -247,13 +255,13 @@ const ProductList = () => {
                     </Field>
 
                     <Field
-                      label="Product Description"
+                      label={tProduct("addProductModel.productDescription")}
                       name="products_description"
                       defaultValue={description}
                     >
                       {({ fieldProps }) => (
                         <TextArea
-                          placeholder="Delicious Milk yogurt"
+                          placeholder={tProduct("addProductModel.productDescription")}
                           {...fieldProps}
                           value={description}
                           onChange={(e) => setDescription(e.target.value)}
@@ -263,14 +271,14 @@ const ProductList = () => {
                   </ModalBody>
                   <ModalFooter>
                     <Button onClick={close} appearance="subtle">
-                      Cancel
+                    {tProduct("addProductModel.cancel")}
                     </Button>
                     <Button
                       type="submit"
                       form="form-with-id"
                       appearance="primary"
                     >
-                      Submit
+                      {tProduct("addProductModel.submit")}
                     </Button>
                   </ModalFooter>
                 </form>

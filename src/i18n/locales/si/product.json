@@ -1,6 +1,27 @@
 {
-  "productDetails": "නිෂ්පාදන විස්තර",
-  "addToCart": "කරත්තයට එක් කරන්න",
-  "checkout": "පිරික්සීම",
-  "addProduct": "නිෂ්පාදනය එක් කරන්න"
+  "headingSection": {
+    "productManagement": "නිෂ්පාදන කළමනාකරණය",
+    "filter": "ෆිල්ටර්",
+    "chooseOption": "විකල්පයක් තෝරන්න",
+    "addProduct": "නිෂ්පාදනය එක් කරන්න",
+    "share": "බෙදා හරිනවා"
+  },
+  "contentSection": {
+    "name": "නම",
+    "price": "මිල",
+    "action": "ක්‍රියා"
+  },
+  "addProductModel": {
+    "addNewProduct": "නව නිෂ්පාදනය එක් කරන්න",
+    "display": "පෙන්වන්න",
+    "productName": "නිෂ්පාදන නම",
+    "milkYogurt": "කිරි යෝගට්",
+    "taxRate": "බදු අනුපාතය",
+    "selectPlaceholder": "තෝරන්න...",
+    "price": "මිල",
+    "productDescription": "නිෂ්පාදන විස්තරය",
+    "deliciousMilkYogurt": "රසවත් කිරි යෝගට්",
+    "cancel": "අවලංගු කරන්න",
+    "submit": "ඉදිරිපත් කරන්න"
+  }
 }

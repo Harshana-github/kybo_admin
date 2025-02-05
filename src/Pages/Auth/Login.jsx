@@ -19,10 +19,16 @@ import Form, {
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { login } from "../../Features/auth/authThunk";
+import { useTranslation } from "react-i18next";
 
 function Login() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const { t: tLogin, i18n } = useTranslation("login");
+
+  const changeLanguage = (lang) => {
+    i18n.changeLanguage(lang); // Change language dynamically
+  };
 
   const handleSubmit = async (data) => {
     try {
@@ -52,30 +58,26 @@ function Login() {
       <Form onSubmit={handleSubmit}>
         {({ formProps, submitting }) => (
           <form {...formProps}>
-            <FormHeader title="Sign in">
+            <FormHeader title={tLogin("signIn")}>
               <p aria-hidden="true">
-                Required fields are marked with an asterisk <RequiredAsterisk />
+                {tLogin("requiredFieldsMessage")} <RequiredAsterisk />
               </p>
             </FormHeader>
             <FormSection>
               <Field
                 aria-required={true}
                 name="email"
-                label="Email"
+                label={tLogin("email")}
                 isRequired
               >
                 {({ fieldProps, error }) => (
                   <Fragment>
                     <TextField autoComplete="off" {...fieldProps} />
                     {!error && (
-                      <HelperMessage>
-                        You can use letters, numbers and periods.
-                      </HelperMessage>
+                      <HelperMessage>{tLogin("emailHelper")}</HelperMessage>
                     )}
                     {error && (
-                      <ErrorMessage>
-                        This username is already in use, try another one.
-                      </ErrorMessage>
+                      <ErrorMessage>{tLogin("emailError")}</ErrorMessage>
                     )}
                   </Fragment>
                 )}
@@ -83,7 +85,7 @@ function Login() {
               <Field
                 aria-required={true}
                 name="password"
-                label="Password"
+                label={tLogin("password")}
                 defaultValue=""
                 isRequired
                 validate={(value) =>
@@ -96,17 +98,14 @@ function Login() {
                       <TextField type="password" {...fieldProps} />
                       {error && !valid && (
                         <HelperMessage>
-                          Use 8 or more characters with a mix of letters,
-                          numbers and symbols.
+                          {tLogin("passwordHelper")}
                         </HelperMessage>
                       )}
                       {error && (
-                        <ErrorMessage>
-                          Password needs to be more than 8 characters.
-                        </ErrorMessage>
+                        <ErrorMessage>{tLogin("passwordError")}</ErrorMessage>
                       )}
                       {valid && meta.dirty ? (
-                        <ValidMessage>Awesome password!</ValidMessage>
+                        <ValidMessage>{tLogin("awesomePassword")}</ValidMessage>
                       ) : null}
                     </Fragment>
                   );
@@ -114,33 +113,51 @@ function Login() {
               </Field>
               <CheckboxField
                 name="remember"
-                label="Remember me"
+                label={tLogin("rememberMe")}
                 defaultIsChecked
               >
                 {({ fieldProps }) => (
-                  <Checkbox
-                    {...fieldProps}
-                    label="Always sign in on this device"
-                  />
+                  <Checkbox {...fieldProps} label={tLogin("alwaysSignIn")} />
                 )}
               </CheckboxField>
             </FormSection>
 
             <FormFooter>
               <ButtonGroup>
-                <Button appearance="subtle">Cancel</Button>
+                <Button appearance="subtle">{tLogin("cancel")}</Button>
                 <LoadingButton
                   type="submit"
                   appearance="primary"
                   isLoading={submitting}
                 >
-                  Sign up
+                  {tLogin("signUp")}
                 </LoadingButton>
               </ButtonGroup>
             </FormFooter>
           </form>
         )}
       </Form>
+      <div
+        style={{
+          position: "fixed",
+          bottom: "150px",
+          left: "0",
+          width: "100%",
+          textAlign: "center",
+        }}
+      >
+        <ButtonGroup>
+          <Button appearance="subtle" onClick={() => changeLanguage("en")}>
+            English
+          </Button>
+          <Button appearance="subtle" onClick={() => changeLanguage("jp")}>
+            日本語
+          </Button>
+          <Button appearance="subtle" onClick={() => changeLanguage("si")}>
+            සිංහල
+          </Button>
+        </ButtonGroup>
+      </div>
     </div>
   );
 }

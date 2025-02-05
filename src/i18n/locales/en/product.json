@@ -1,6 +1,27 @@
 {
-  "productDetails": "Product Details",
-  "addToCart": "Add to Cart",
-  "checkout": "Checkout",
-  "addProduct": "Add Product"
+  "headingSection": {
+    "productManagement": "Product Management",
+    "filter": "Filter",
+    "chooseOption": "Choose an Option",
+    "addProduct": "Add Product",
+    "share": "Share"
+  },
+  "contentSection": {
+    "name": "Name",
+    "price": "Price",
+    "action": "Action"
+  },
+  "addProductModel":{
+    "addNewProduct": "Add New Product",
+    "display": "Display",
+    "productName": "Product Name",
+    "milkYogurt": "Milk Yogurt",
+    "taxRate": "Tax rate",
+    "selectPlaceholder": "Select...",
+    "price": "Price",
+    "productDescription": "Product Description",
+    "deliciousMilkYogurt": "Delicious Milk yogurt",
+    "cancel": "Cancel",
+    "submit": "Submit"
+  }
 }

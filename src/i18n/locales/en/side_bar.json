@@ -1,0 +1,36 @@
+{
+  "sideBarTopTitle": "KYBO Official",
+  "sideBarTopSubTitle": "By Sonasu service",
+  "goBack": "Go back",
+  "tooltip":{
+    "leftSideBar": "Left Sidebar"
+  },
+  "filters": {
+    "filters": "Filters",
+    "searchIssues": "Search issues",
+    "started": "STARTED",
+    "everythingMe": "Everything me",
+    "myOpenIssue": "My open issues",
+    "reportedByMe": "Reported by me",
+    "searchIssues": "Search issues",
+    "other": "OTHER",
+    "allIssues": "All issues",
+    "openIssues": "Open issues",
+    "createdRecently": "Created recently",
+    "resolvedRecently": "Resolved Recently",
+    "viewAllFilters": "View all filters"
+  },
+  "product": {
+    "productManagement": "Product Management",
+    "dashboard": "Dashboard",
+    "productList": "Product List",
+    "productManagementOptions": "Product Management Options"
+  },
+  "settings": {
+    "settings": "Settings",
+    "lSettings": "Language settings"
+  },
+  "sideBarBottomTitle1": "Give feedback",
+  "sideBarBottomTitle2": "Learn more",
+  "sideBarBottomSubTitle": "You're in a kybo project"
+}

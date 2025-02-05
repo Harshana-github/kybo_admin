@@ -1,0 +1,15 @@
+{
+  "signIn": "Sign in",
+  "requiredFieldsMessage": "Required fields are marked with an asterisk",
+  "email": "Email",
+  "emailHelper": "You can use letters, numbers and periods.",
+  "emailError": "This username is already in use, try another one.",
+  "password": "Password",
+  "passwordHelper": "Use 8 or more characters with a mix of letters, numbers and symbols.",
+  "passwordError": "Password needs to be more than 8 characters.",
+  "awesomePassword": "Awesome password!",
+  "rememberMe": "Remember me",
+  "alwaysSignIn": "Always sign in on this device",
+  "cancel": "Cancel",
+  "signUp": "Sign up"
+}

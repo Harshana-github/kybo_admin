@@ -1,0 +1,12 @@
+{
+    "orders": "Orders",
+    "products": "Products",
+    "masters": "Masters",
+    "newOrder": "New Order",
+    "search": "Search",
+    "tooltip":{
+        "create_new_order": "Create new order",
+        "notifications": "Notifications",
+        "yourProfileAndSettings": "Your profile and settings"
+    }
+}
