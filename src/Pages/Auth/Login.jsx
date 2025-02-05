@@ -36,7 +36,7 @@ function Login() {
 
   useEffect(() => {
     setGlobalTheme({
-      light: "light",
+      light: "",
       dark: "dark",
       colorMode: themeMode, // "light" or "dark"
       typography: "typography-modernized",
@@ -44,7 +44,7 @@ function Login() {
   }, [themeMode]);
 
   const toggleTheme = () => {
-    setThemeMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
+    setThemeMode((prevMode) => (prevMode === "" ? "dark" : ""));
   };
 
   const handleSubmit = async (data) => {
@@ -73,7 +73,7 @@ function Login() {
       }}
     >
       <Button key="toggle" onClick={toggleTheme} appearance="subtle">
-        {themeMode === "light" ? tGeneral("darkMode") : tGeneral("lightMode")}
+        {themeMode === "" ? tGeneral("darkMode") : tGeneral("lightMode")}
       </Button>
       <Form onSubmit={handleSubmit}>
         {({ formProps, submitting }) => (

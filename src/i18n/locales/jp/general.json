@@ -4,5 +4,21 @@
   "settings": "設定",
   "languageSettings": "言語設定",
   "darkMode": "ダークモード",
-  "lightMode": "ライトモード"
+  "lightMode": "ライトモード",
+  "dashboard": {
+    "MonthlyProductSalesSummary": "月間製品売上概要",
+    "January": "1月",
+    "February": "2月",
+    "March": "3月",
+    "April": "4月",
+    "May": "5月",
+    "June": "6月",
+    "July": "7月",
+    "August": "8月",
+    "September": "9月",
+    "October": "10月",
+    "November": "11月",
+    "December": "12月",
+    "sales": "売上"
+  }
 }

@@ -4,5 +4,21 @@
   "settings": "සැකසුම්",
   "languageSettings": "භාෂා සැකසුම්",
   "darkMode": "අඳුරු ප්‍රකෘතිය",
-  "lightMode": "ආලෝකමය ප්‍රකෘතිය"
+  "lightMode": "ආලෝකමය ප්‍රකෘතිය",
+  "dashboard": {
+    "MonthlyProductSalesSummary": "මාසික නිෂ්පාදන අලෙවි සාරාංශය",
+    "January": "ජනවාරි",
+    "February": "පෙබරවාරි",
+    "March": "මාර්තු",
+    "April": "අප්‍රේල්",
+    "May": "මැයි",
+    "June": "ජූනි",
+    "July": "ජූලි",
+    "August": "අගෝස්තු",
+    "September": "සැප්තැම්බර්",
+    "October": "ඔක්තෝබර්",
+    "November": "නොවැම්බර්",
+    "December": "දෙසැම්බර්",
+    "sales": "අලෙවි"
+  }
 }

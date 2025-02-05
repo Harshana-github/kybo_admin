@@ -64,7 +64,7 @@ const AtlassianProductHome = () => {
       icon={AtlassianIcon}
       logo={AtlassianLogo}
       siteTitle={t("siteTitle")}
-      href="/home"
+      href="/"
     />
   );
 };
@@ -170,14 +170,14 @@ function Home() {
 
   useEffect(() => {
     setGlobalTheme({
-      light: "light",
+      light: "",
       dark: "dark",
       colorMode: themeMode,
     });
   }, [themeMode]);
 
   const handleToggleChange = (e) => {
-    setThemeMode(e.target.checked ? "dark" : "light");
+    setThemeMode(e.target.checked ? "dark" : "");
   };
 
   const NotificationsBadge = () => {
