@@ -26,6 +26,15 @@
     "productList": "Product List",
     "productManagementOptions": "Product Management Options"
   },
+  "order": {
+    "OrderManagement": "Order Management"
+  },
+  "inventory": {
+    "inventoryManagement": "Inventory Management"
+  },
+  "user": {
+    "userManagement": "User Management"
+  },
   "settings": {
     "settings": "Settings",
     "lSettings": "Language settings"

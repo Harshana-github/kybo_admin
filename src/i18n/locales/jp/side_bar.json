@@ -26,6 +26,15 @@
     "productList": "製品一覧",
     "productManagementOptions": "製品管理オプション"
   },
+  "order": {
+    "OrderManagement": "注文管理"
+  },
+  "inventory": {
+    "inventoryManagement": "在庫管理"
+  },
+  "user": {
+    "userManagement": "ユーザー管理"
+  },
   "settings": {
     "settings": "設定",
     "lSettings": "言語設定"

@@ -26,6 +26,15 @@
     "productList": "නිෂ්පාදන ලැයිස්තුව",
     "productManagementOptions": "නිෂ්පාදන කළමනාකරණ විකල්ප"
   },
+  "order": {
+    "OrderManagement": "ඇණවුල් කළමනාකරණය"
+  },
+  "inventory": {
+    "inventoryManagement": "ගබඩා කළමනාකරණය"
+  },
+  "user": {
+    "userManagement": "පරිශීලක කළමනාකරණය"
+  },
   "settings": {
     "settings": "සැකසුම්",
     "lSettings": "භාෂා සැකසුම්"
