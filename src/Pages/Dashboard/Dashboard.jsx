@@ -11,7 +11,10 @@ const boxStyles = xcss({
   borderWidth: "border.width",
   paddingTop:"space.300",
   paddingLeft:"space.200",
-  width:"48%"
+  width: "48%",
+  '@media (max-width: 768px)': {
+    width: "96%",
+  },
 });
 
 
